@@ -9,3 +9,9 @@ variable "name" {
   type        = string
   default     = "alexandria"
 }
+
+variable "stage" {
+  description = "Stage"
+  type        = string
+  default     = "dev"{
+}

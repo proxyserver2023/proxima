@@ -1,5 +1,14 @@
 terraform {
-  required_version = ">= 1.10"
+  backend "s3" {
+    region = var.region
+  }
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.84"
+    }
+  }
 }
 
 provider "aws" {
