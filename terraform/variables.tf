@@ -13,5 +13,5 @@ variable "name" {
 variable "stage" {
   description = "Stage"
   type        = string
-  default     = "dev"{
+  default     = "dev"
 }
