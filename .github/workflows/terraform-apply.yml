@@ -1,8 +1,6 @@
 name: TerraformApply
 
-on:
-  push:
-    branches: [main]
+on: workflow_dispatch
 
 permissions:
   id-token: write # This is required for requesting the JWT

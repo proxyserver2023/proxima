@@ -1,8 +1,6 @@
 name: TerraformPlan
 
-on:
-  pull_request:
-    branches: [main]
+on: workflow_dispatch
 
 permissions:
   id-token: write # This is required for requesting the JWT
