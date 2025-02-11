@@ -1,6 +1,12 @@
 name: TerraformPlan
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      stage:
+        description: "The stage to deploy to"
+        required: false
+        default: "dev"
 
 permissions:
   id-token: write # This is required for requesting the JWT
@@ -14,5 +20,5 @@ jobs:
       - name: terraform-plan
         uses: proxyserver2023/alexandria/github-workflows/terraform-plan@dev
         with:
-          stage: ${{ github.event.pull_request.base.ref }}
+          stage: ${{ inputs.stage || 'dev' }}
           terraform_path: terraform/
